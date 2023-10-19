@@ -12,7 +12,7 @@
     height: 100%;
     width: 100%;
 }
-.animal-image-content{
+.animal-image-content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,11 +22,14 @@
     background-image: url("https://www.freepnglogos.com/uploads/animals-png/animals-vesperius-deviantart-8.png");
     background-size: contain;
     background-repeat: no-repeat;
+    opacity: 0; /* Configura la opacidad inicial en 0 para que el div esté oculto */
+    animation: aparecer .4s .4s forwards;
 }
 
 .banner-title{
     color: rgb(61, 60, 60);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .banner-subtitle{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;
@@ -48,4 +51,11 @@
     width: 40%;
     height: 100%;
     text-align: center;
+    opacity: 0; /* Configura la opacidad inicial en 0 para que el div esté oculto */
+    animation: aparecer .6s .6s forwards;
+}
+@keyframes aparecer {
+    to {
+        opacity: 1; /* Configura la opacidad final en 1 para hacer visible el div */
+    }
 }
